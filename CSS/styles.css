@@ -6,13 +6,51 @@
 
 body {
   background-color: rgb(68, 68, 68);
-  padding: 50px;
+  padding: 50px 100px;
+  font-size: smaller;
+}
+
+@keyframes rgb-colors {
+  0% {
+    box-shadow: 1px 1px 10px 1px rgb(172, 255, 49);
+  }
+  10% {
+    box-shadow: 1px 1px 10px 1px rgb(255, 241, 49);
+  }
+  20% {
+    box-shadow: 1px 1px 10px 1px rgb(255, 162, 49);
+  }
+  30% {
+    box-shadow: 1px 1px 10px 1px rgb(255, 49, 49);
+  }
+  40% {
+    box-shadow: 1px 1px 10px 1px rgb(255, 49, 162);
+  }
+  50% {
+    box-shadow: 1px 1px 10px 1px rgb(152, 49, 255);
+  }
+  60% {
+    box-shadow: 1px 1px 10px 1px rgb(49, 59, 255);
+  }
+  70% {
+    box-shadow: 1px 1px 10px 1px rgb(49, 252, 255);
+  }
+  80% {
+    box-shadow: 1px 1px 10px 1px rgb(49, 255, 111);
+  }
+  90% {
+    box-shadow: 1px 1px 10px 1px rgb(16, 173, 37);
+  }
+  100% {
+    box-shadow: 1px 1px 10px 1px rgb(153, 255, 0);
+  }
 }
 
 .keyboard {
-  height: 300px;
-  padding: 10px;
+  height: 450px;
+  padding: 30px;
   border: 3px double rgba(0, 0, 0, .5);
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, .5);
 }
 
 .key-wrapper {
@@ -27,6 +65,94 @@ body {
   margin: 2px;
 }
 
+.top-row {
+  height: 30px;
+  width: 54px;
+}
+
+.top-row > .key {
+  font-size: 15px;
+}
+
+.escape > .key {
+  font-size: 12px;
+}
+
+.prt-scr {
+  width: 51px;
+}
+
+.back-tick {
+  width: 53px;
+}
+
+.delete {
+  width: 60px;
+}
+
+.backspace {
+  width: 110px;
+}
+
+.media-key {
+  width: 60px;
+}
+
+.tab {
+  width: 90px;
+}
+
+.bslash {
+  width: 73px;
+}
+
+.long-key {
+  height: 128px;
+  position: absolute;
+  margin-left: 7px;
+}
+
+.caps {
+  width: 120px;
+}
+
+.index-fng .key {
+  position: absolute;
+}
+
+.index{
+  height: 100px;
+}
+
+.enter {
+  width: 112px;
+}
+
+.shift-key {
+  width: 150px;
+}
+
+.ctrl-key {
+  width: 80px;
+}
+
+.space-key {
+  width: 28%;
+}
+
+.arrow-up {
+  height: 28px;
+  position: absolute;
+}
+
+.arrow-down {
+  height: 28px;
+}
+
+.zero-key {
+  width: 130px;
+}
+
 .key {
   position: absolute;
   top: -4px;
@@ -35,11 +161,12 @@ body {
   height: 100%;
   background: linear-gradient(90deg, #232323, #4a4a4a);
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, .4);
+  border: 1px solid white;
   font-size: 20px;
   color: rgb(128, 128, 128);
   box-shadow: 2px 2px 3px rgba(0, 0, 0, .6);
   transition: all .2s ease;
+  animation: rgb-colors ease 5s alternate infinite;
 }
 
 .key-wrapper:active .key {
@@ -48,6 +175,12 @@ body {
   box-shadow: none;
 }
 
-.space-key {
-  width: 100%;
+img {
+  height: 20px;
+  margin: 5px 0 0 3px;
+}
+
+footer {
+  color: white;
+  margin-top: 30px;
 }
